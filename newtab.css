@@ -1,0 +1,327 @@
+body{
+    background-image: url("./assets/wallpapers/default.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+}
+
+#clock-wrapper{
+    width: 40vh;
+    height: 20vh;
+    background-color: rgb(205, 205, 205);
+    background-color: rgba(205, 205, 205, 0.4);
+    border-radius: 30px;
+    position: absolute;
+    top: 10vh;
+    right: 10vh;
+    cursor: default;
+    display: none;
+}
+
+#clock{
+    text-align: center;
+}
+
+#clock #day{
+    font-size: 5vh;
+    font-weight: bold;
+    color: white;
+}
+
+hr{
+    width: 80%;
+    height: 0.3vh;
+    border-radius: 5px;
+    background-color: white;
+    border: 0 none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#clock #time{
+    font-size: 6vh;
+    font-weight: 500;
+    color: white;
+}
+
+#clock #date{
+    font-size: 3vh;
+    font-weight: 300;
+    color: white;
+}
+
+#settings:hover{
+    color: white;
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+
+#settings{
+    position: absolute;
+    bottom: 3vh;
+    right: 3vh;
+    color: darkgray;
+    font-size: 3vh;
+    transition: 0.3s ease-in;
+}
+
+#close-overlay{
+    position: absolute;
+    bottom: 3vh;
+    right: 3vh;
+    color: darkgray;
+    font-size: 3vh;
+    transition: 0.3s ease-in;
+}
+
+#close-overlay:hover{
+    color: white;
+    cursor: pointer;
+}
+
+#overlay{
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease;
+}
+
+#overlay-wrapper{
+    display: none;
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    transition: 0.5s ease;
+    animation: fadein 2s;
+    -webkit-animation: fadein 2s;
+}
+
+#overlay-wrapper-2{
+    display: none;
+    width: 90%;
+    height: 20%;
+    transition: 0.5s ease;
+    animation: fadein 2s;
+    -webkit-animation: fadein 2s;
+    margin: 0 auto;
+}
+
+button{
+    visibility: hidden;
+    margin: 10px;
+    padding: 0;
+}
+
+img{
+    visibility: visible;
+    height: 16vh;
+    border-radius: 20px;
+    border: 5px solid #FFFFFF;
+    transition: 0.3s ease-in-out;
+    margin: 1vh;
+}
+
+img:hover{
+    filter: blur(3px);
+    cursor: pointer;
+}
+
+#switch div{
+    width: 15vh;
+    height: 6vh;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    visibility: visible;
+    font-size: large;
+    cursor: pointer;
+}
+
+#clock-switch{
+    transition: 0.3s ease-in;
+    margin: 10px;
+}
+
+#clock-switch:hover{
+    background-color: gray;
+}
+
+#clock-switch[data-theme="on"]{
+    background-color: green;
+}
+
+#clock-switch[data-theme="on"]:hover{
+    background-color: darkgreen;
+}
+
+#hour-switch{
+    transition: 0.3s ease-in;
+    margin: 10px;
+}
+
+#hour-switch:hover{
+    background-color: gray;
+}
+
+#hour-switch[data-theme="24"]{
+    background-color: green;
+}
+
+#hour-switch[data-theme="24"]:hover{
+    background-color: darkgreen;
+}
+
+#addNewMenu{
+    background-color: #6F6F6F;
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    border-radius: 40px;
+    border: solid;
+    border-color: darkgray;
+    top: 10%;
+    left: 25%;
+    display: none;
+    animation: fadein 0.5s;
+    -webkit-animation: fadein 0.5s;
+    transition: 0.6s ease;
+}
+
+#closeAddNewMenu{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3vh;
+    color: darkgray;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+#closeAddNewMenu:hover{
+    transform: rotate(180deg);
+    color: white;
+}
+
+#form{
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#form input{
+    width: 35vh;
+    height: 3vh;
+    background-color: black;
+    border: solid darkgray;
+    border-radius: 10px;
+    color: white;
+    transition: 0.2s ease-in;
+}
+
+#form input:hover{
+    background-color: #404040;
+}
+
+#form input:focus{
+    background-color: #404040;
+}
+
+#submitButton{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 10vh;
+    height: 4vh;
+    visibility: visible;
+    background-color: #404040;
+    border: solid darkgray;
+    border-radius: 10px;
+    color: white;
+    transition: 0.2s ease-in;
+}
+
+#submitButton[data-theme="enabled"]{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 10vh;
+    height: 4vh;
+    visibility: visible;
+    background-color: black;
+    border: solid darkgray;
+    border-radius: 10px;
+    color: white;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+#submitButton:hover{
+    background-color: #404040;
+}
+
+#preview{
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    bottom: 11vh;
+    left: 10vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#message{
+    color: darkred;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    -webkit-text-stroke: 0.7px black;
+    display: none;
+}
+
+#changesAlert{
+    position: absolute;
+    left: 39%;
+    background-color: red;
+    width: 40vh;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    padding: 2vh;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    display: none;
+    opacity: 0;
+}
+
+.alert-text{
+    width: 80%;
+}
+
+#alert-close{
+    position: absolute;
+    right: 1vh;
+    top: 34%;
+    transition: 0.4s ease;
+}
+
+#alert-close:hover{
+    cursor: pointer;
+}
+
+@keyframes fadein{
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes fadein{
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

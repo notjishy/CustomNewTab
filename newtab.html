@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>new tab uwu</title>
+        <script src="newtab.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="newtab.css">
+    </head>
+
+    <body>
+        <div id="changesAlert">
+            <div class="alert-text">One or more of your changes may require the page to be refreshed to take effect.</div>
+            <div id="alert-close">
+                <i class="material-icons">cancel</i>
+            </div>
+        </div>
+        <div id="addNewMenu">
+            <i class="material-icons" id="closeAddNewMenu">cancel</i>
+            <div id="form">
+                <h1>Image URL</h1>
+                <input type="text" id="imgurl" name="imgururl" placeholder="https://i.imgur.com/_______.jpg/png">
+            </div>
+            <div id="preview"></div>
+            <button id="submitButton">Confirm</button>
+            <h2 id="message">Unable to find image. Make sure the URL is a direct link to the image.</h2>
+        </div>
+
+        <div id="overlay">
+            <i class="material-icons" id="close-overlay">cancel</i>
+            <div id="overlay-wrapper"></div>
+            <div id="overlay-wrapper-2">
+                <button id="switch">
+                    <div id="clock-switch">
+                        <i class="material-icons" id="clock-toggle-icon">cancel</i><br>
+                        Show Clock
+                    </div>
+                    <div id="hour-switch">
+                        <i class="material-icons" id="hour-toggle-icon">cancel</i><br>
+                        24-Hour Format
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div id="container">
+            <div id="clock-wrapper">
+                <div id="clock">
+                    <div id="day"></div>
+                    <hr class="divide">
+                    <div id="time"></div>
+                    <div id="date"></div>
+                </div>
+            </div>
+        </div>
+        <i class="material-icons" id="settings">settings</i>
+    </body>
+</html>
