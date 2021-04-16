@@ -174,8 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Clock hour format changed to 24 hours')
             })
 
-            document.getElementById("changesAlert").style.display = "inline"
-            document.getElementById("changesAlert").style.opacity = 100
+            hourFormat = 24
         } else {
             document.getElementById("hour-switch").removeAttribute('data-theme')
             document.getElementById("hour-toggle-icon").innerHTML = "cancel"
@@ -184,8 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Clock hour format changed to 12 hours')
             })
 
-            document.getElementById("changesAlert").style.display = "inline"
-            document.getElementById("changesAlert").style.opacity = 100
+            hourFormat = 12
         }
     })
 
