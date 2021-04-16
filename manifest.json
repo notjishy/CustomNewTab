@@ -1,11 +1,8 @@
 {
     "manifest_version": 2,
-    "version": "1.0",
+    "version": "0.1.1",
     "name": "Custom New Tab",
     "description": "Jishy's New Tab page all for himself UwU",
-    "icons": {
-        "128": "assets/fullstackicon.png"
-    },
     "chrome_url_overrides": {
         "newtab": "newtab.html"
     },
