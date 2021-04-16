@@ -9,7 +9,7 @@ Please note that it is very early in its development and is currently  missing a
 <img src="https://jishy.is-inside.me/ZrXY2vX5.jpg" width=70%>
 
 ## Tested Browsers
-This extension should work in any web browser than is forked from Google's Chromium project. The browsers I have tested and have confirmed the extension to function properly on listed below.
+This extension should work in any web browser that is forked from Google's Chromium project. The browsers I have tested and have confirmed the extension to function properly on listed below.
 
 - Google Chrome
 - Un-Googled Chromium
@@ -32,7 +32,7 @@ Again, note that this is still very early in development.
 ## Installation
 Since this extension is not available the Chrome Web Store, installing is a bit different than what you might be used to. However, it is still very simple.
   
-**1. At the top of this page click the green "Code" button, then click "Download ZIP"**<br>
+**1. At the top of this page click the green "Code" button, then click "Download ZIP".**<br>
   <img src="https://jishy.is-inside.me/TG4SwZH9.png" width=30%>
   
 **2. After the file has downloaded, use any software to unzip the file and save it to where you'd like. It may say "Extract" or "Unzip" depending on the software.**<br>
@@ -45,4 +45,4 @@ Since this extension is not available the Chrome Web Store, installing is a bit 
   <img src="https://jishy.is-inside.me/Knk5dcWY.png" width=30%>
   <img src="https://jishy.is-inside.me/vFwPQ6DT.png" width=60%>
   
- **Congrats! You've installed the extension! Be sure not to delete or relocate the files downloaded or you will need to add them to the browser again.**
+ **Congrats! You've installed the extension! Be sure not to delete or relocate the files you downloaded or you will need to add them to the browser again.**
