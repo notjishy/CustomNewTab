@@ -209,6 +209,10 @@ img:hover{
     color: white;
 }
 
+.addNew{
+    border-radius: 50%;
+}
+
 #form{
     color: white;
     position: absolute;

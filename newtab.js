@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var element = document.createElement("img")
         element.src = "assets/wallpapers/add.png"
         element.id = "addNew"
+        element.className = "addNew"
         element.addEventListener('click', function() {
             let menu = document.getElementById("addNewMenu")
 
