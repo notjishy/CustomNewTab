@@ -125,12 +125,31 @@ img{
     border-radius: 20px;
     border: 5px solid #FFFFFF;
     transition: 0.3s ease-in-out;
-    margin: 1vh;
 }
 
 img:hover{
     filter: blur(3px);
     cursor: pointer;
+}
+
+.imgButtonDiv{
+    margin: 1vh;
+    float: right;
+    position: relative;
+}
+
+#imgLoadErrText{
+    color: crimson;
+    font-size: 5vw;
+    -webkit-text-stroke: 1px white;
+    margin: 0;
+    position: absolute;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    margin-left: 35%;
+    margin-right: 35%;
+    z-index: 9999;
+    pointer-events: none;
 }
 
 #switch div{
@@ -211,6 +230,7 @@ img:hover{
 
 .addNew{
     border-radius: 50%;
+    margin: 1vh;
 }
 
 #form{
@@ -290,7 +310,7 @@ img:hover{
     display: none;
 }
 
-#changesAlert{
+#errorAlert{
     position: absolute;
     left: 39%;
     background-color: red;
@@ -303,6 +323,7 @@ img:hover{
     transition: 0.4s ease;
     display: none;
     opacity: 0;
+    z-index: 9999;
 }
 
 .alert-text{
