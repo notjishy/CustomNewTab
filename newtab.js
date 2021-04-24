@@ -147,6 +147,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 var amPm = ( hours < 12 ) ? "AM" : "PM"
 
                 hours = ( hours > 12 ) ? hours - 12 : hours
+                if (hours == 00) {
+                    hours = 12
+                }
 
                 document.getElementById("time").innerHTML = hours + ":" + mins + "." + secs + " " + amPm
             } else {
