@@ -1,11 +1,21 @@
-body{
-    background-image: url("./assets/wallpapers/default.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
+body, html{
     height: 100%;
+    margin: 0;
+
     overflow-x: hidden;
-    transition: 0.5s ease;
+    overflow-y: hidden;
+}
+
+#bg{
+  background-image: url("./assets/wallpapers/default.jpg");
+
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  transition: 0.5s ease;
 }
 
 #clock-wrapper{

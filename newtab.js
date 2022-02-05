@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// set wallaper to saved wallpaper when tab loads
 	chrome.storage.local.get(['background'], function(result) {
-		document.body.style.backgroundImage = `url(${result.background})`
+		document.getElementById("bg").style.backgroundImage = `url(${result.background})`
 	})
 
 	// when tab loads, check if clock is enabled and display it if true
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		// update wallpaper to selected image
 		element.addEventListener('click', function() {
-			document.body.style.backgroundImage = `url(${this.alt})`
+			document.getElementById("bg").style.backgroundImage = `url(${this.alt})`
 
 			chrome.storage.local.set({
 				background: `${this.alt}`
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				})
 			})
 
-			document.body.style.backgroundImage = `url(${url})`
+			document.getElementById("bg").style.backgroundImage = `url(${url})`
 
 			chrome.storage.local.set({
 				background: `${url}`
