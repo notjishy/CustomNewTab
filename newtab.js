@@ -24,7 +24,30 @@ document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById("settings").addEventListener('click', function() {
 		if (!settingsActive) {
 			settingsActive = true;
-			openSettings();
+			
+			var wrapper = document.getElementById("overlay-wrapper");
+
+			openSettings(wrapper);
+
+			var element = document.createElement("img");
+		  element.src = "assets/wallpapers/add.png";
+		  element.id = "addNew";
+		  element.className = "addNew";
+		  element.addEventListener('click', function() {
+		    let menu = document.getElementById("addNewMenu");
+
+		    document.getElementById("container").style.visibility = "hidden";
+
+		    menu.style.display = "inline";
+
+		    document.getElementById("overlay").style.height = "0";
+		    document.getElementById("overlay-wrapper").style.display = "none";
+		    document.getElementById("overlay-wrapper-2").style.display = "none";
+
+				removeImagesFromOverlayWrapperMenu();
+			});
+
+			wrapper.appendChild(element);
 		}
 	});
 
@@ -46,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			document.getElementById("overlay-wrapper-2").style.display = "none";
 
 			removeImagesFromOverlayWrapperMenu();
-			settingsActive = false;
 		}
 	});
 
@@ -168,5 +190,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	function removeImagesFromOverlayWrapperMenu() {
 		var wrapper = document.getElementById("overlay-wrapper");
 		wrapper.innerHTML = "";
+		settingsActive = false;
 	}
 });

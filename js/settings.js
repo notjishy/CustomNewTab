@@ -1,29 +1,7 @@
-function openSettings(){
-  var wrapper = document.getElementById("overlay-wrapper");
-
+function openSettings(wrapper){
   document.getElementById("overlay").style.height = "100%";
   wrapper.style.display = "block";
   document.getElementById("overlay-wrapper-2").style.display = "block";
-
-  var element = document.createElement("img");
-  element.src = "assets/wallpapers/add.png";
-  element.id = "addNew";
-  element.className = "addNew";
-  element.addEventListener('click', function() {
-    let menu = document.getElementById("addNewMenu");
-
-    document.getElementById("container").style.visibility = "hidden";
-
-    menu.style.display = "inline";
-
-    document.getElementById("overlay").style.height = "0";
-    document.getElementById("overlay-wrapper").style.display = "none";
-    document.getElementById("overlay-wrapper-2").style.display = "none";
-
-    removeImagesFromOverlayWrapperMenu();
-  });
-
-  wrapper.appendChild(element);
 
   chrome.storage.local.get({
     userWallpapers: []
