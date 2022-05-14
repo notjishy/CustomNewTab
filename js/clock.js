@@ -75,7 +75,7 @@ function toggleClock(){
       showClock: true
     }, function() {
       console.log('Enabled clock');
-    })
+    });
 
     document.getElementById("clock-wrapper").style.display = "inline";
 
@@ -89,7 +89,7 @@ function toggleClock(){
       showClock: false
     }, function() {
       console.log('Disabled clock');
-    })
+    });
 
     document.getElementById("clock-wrapper").style.display = "none";
 
@@ -108,7 +108,7 @@ function toggleClockFormat(){
       hourFormat: 24
     }, function() {
       console.log('Clock hour format changed to 24 hours');
-    })
+    });
 
     hourFormat = 24;
   } else {
@@ -119,7 +119,7 @@ function toggleClockFormat(){
       hourFormat: 12
     }, function() {
       console.log('Clock hour format changed to 12 hours');
-    })
+    });
 
     hourFormat = 12;
   }
