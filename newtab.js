@@ -1,3 +1,5 @@
+var settingsActive = false;
+
 document.addEventListener('DOMContentLoaded', function() {
 
 	// set wallaper to saved wallpaper when tab loads
@@ -20,7 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Open settings overlay
 	document.getElementById("settings").addEventListener('click', function() {
-		openSettings();
+		if (!settingsActive) {
+			settingsActive = true;
+			openSettings();
+		}
 	});
 
 	// clock settings toggle
@@ -35,11 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Close settings overlay
 	document.getElementById("close-overlay").addEventListener('click', function() {
-		document.getElementById("overlay").style.height = "0";;
-		document.getElementById("overlay-wrapper").style.display = "none";
-		document.getElementById("overlay-wrapper-2").style.display = "none";
+		if (settingsActive){
+			document.getElementById("overlay").style.height = "0";;
+			document.getElementById("overlay-wrapper").style.display = "none";
+			document.getElementById("overlay-wrapper-2").style.display = "none";
 
-		removeImagesFromOverlayWrapperMenu();
+			removeImagesFromOverlayWrapperMenu();
+			settingsActive = false;
+		}
 	});
 
 	// Close add new menu
